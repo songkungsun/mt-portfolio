@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+.html{font-family: 'Black Han Sans', sans-serif;}
+
+
 .link {
-  color: white;
+  color: #4869d7;
+  transition: color 1s;
 }
 
 .link:hover {
-  color: red;
+  color: #0c2061;
+  
 }
