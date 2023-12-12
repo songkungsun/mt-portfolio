@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
         {children}
       </div>
-      <div style={{marginBottom:'0px',marginTop:'150px'}}>
+      <div style={{marginBottom:'0px',position:'absolute',bottom:'0px',width:'100%'}}>
       <Footer></Footer>
       </div>
       </body>
