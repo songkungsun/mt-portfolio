@@ -15,24 +15,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body style={{backgroundColor:'#cccdd1' ,backgroundSize: 'cover', backgroundPosition: 'center'}}>
-      <Header></Header>
-      <h4 style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '40px',marginTop:'100px',marginBottom:'30px',fontSize:"50px",color:"#4869d7",fontWeight:'900'}}>실습 프로젝트</h4>
-      <ol style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '40px',marginTop:'100px',marginBottom:'30px'}}>
-        <li style={{ fontSize: '20px', marginLeft: '40px' }}><Link href='/clerk-auth'><span className={styles.link}>Clerk-auth</span></Link></li>
-        <li style={{ fontSize: '20px' }}><Link href='/counter'><span className={styles.link}>Counter</span></Link></li>
-        <li style={{ fontSize: '20px' }}><Link href='/opencontact-book'><span className={styles.link}>Opencontact-book</span></Link></li>
-        <li style={{ fontSize: '20px' }}><Link href='/token-drop'><span className={styles.link}>Token-drop</span></Link></li>
-        <li style={{ fontSize: '20px' }}><Link href='/rc721-nft-drop'><span className={styles.link}>Rc721-nft-drop</span></Link></li>
-        <li style={{ fontSize: '20px' }}><Link href='/Market-place'><span className={styles.link}>Market-place</span></Link></li>
-      </ol>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-        {children}
-      </div>
-      <div style={{marginBottom:'0px',position:'absolute',bottom:'0px',width:'100%'}}>
-      <Footer></Footer>
-      </div>
+      <body style={{backgroundColor:'#cccdd1', backgroundSize: 'cover', backgroundPosition: 'center', position:'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <Header></Header>
+        <h4 style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '40px',marginTop:'100px',marginBottom:'30px',fontSize:"50px",color:"#4869d7",fontWeight:'900'}}>실습 프로젝트</h4>
+        <ol style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '40px',marginTop:'100px',marginBottom:'30px'}}>
+          <li style={{ fontSize: '20px', marginLeft: '40px' }}><Link href='/clerk-auth'><span className={styles.link}>Clerk-auth</span></Link></li>
+          <li style={{ fontSize: '20px' }}><Link href='/counter'><span className={styles.link}>Counter</span></Link></li>
+          <li style={{ fontSize: '20px' }}><Link href='/opencontact-book'><span className={styles.link}>Opencontact-book</span></Link></li>
+          <li style={{ fontSize: '20px' }}><Link href='/token-drop'><span className={styles.link}>Token-drop</span></Link></li>
+          <li style={{ fontSize: '20px' }}><Link href='/rc721-nft-drop'><span className={styles.link}>Rc721-nft-drop</span></Link></li>
+          <li style={{ fontSize: '20px' }}><Link href='/Market-place'><span className={styles.link}>Market-place</span></Link></li>
+        </ol>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1' }}>
+          {children}
+        </div>
+        <Footer style={{ position: 'relative' }}></Footer>
       </body>
     </html>
-  )
+  );
 }
